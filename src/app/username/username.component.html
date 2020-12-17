@@ -1,0 +1,17 @@
+<div class="container">
+    <p>username</p>
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+            [(ngModel)]="userName">
+    </div>
+    <p>{{userName}}</p>
+
+    <div class="center">
+        <button type="button" class="btn btn-outline-primary" (click)="onRest($event)"
+         [disabled]="checkIfDeseabled()">
+            Reset Users
+        </button>
+    </div>
+    
+</div>

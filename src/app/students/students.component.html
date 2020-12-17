@@ -1,0 +1,38 @@
+<div class="container text-center">
+    <h1>students :</h1>
+
+    <app-success></app-success>
+    <app-warning></app-warning>
+
+    <div class="row">
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" [(ngModel)]="name">
+            </div>
+        </div>
+
+        <div class="col">
+            <button type="button" class="btn btn-primary" [disabled]="!canAddStudent"
+             (click)="onStudentAdd($event)">
+                Add Student
+            </button>
+        </div>
+    </div>
+
+    <p>{{isClicked}}</p>
+
+    <div class="row">
+        <div class="col">
+            Name
+        </div>
+        <div class="col">
+            Age
+        </div>
+        <div class="col">
+            Date
+        </div>
+    </div>
+    <app-student></app-student>
+    <app-student></app-student>
+</div>
